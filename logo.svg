@@ -1,0 +1,19 @@
+<svg viewBox="0 0 100 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sGrad" x1="10%" y1="100%" x2="90%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <clipPath id="sClip">
+      <rect x="0" y="0" width="100" height="57"/>
+      <rect x="0" y="75" width="100" height="53"/>
+    </clipPath>
+  </defs>
+  <!-- Back S-stroke (clipped at crossing to create interweave) -->
+  <path d="M60 8 C36 8 24 24 24 40 C24 56 40 66 60 66 C80 66 96 76 96 92 C96 108 84 120 60 120"
+        stroke="url(#sGrad)" stroke-width="12" stroke-linecap="round"
+        clip-path="url(#sClip)"/>
+  <!-- Front S-stroke (full path, crosses over) -->
+  <path d="M40 8 C16 8 4 24 4 40 C4 56 20 66 40 66 C60 66 76 76 76 92 C76 108 64 120 40 120"
+        stroke="url(#sGrad)" stroke-width="12" stroke-linecap="round"/>
+</svg>
