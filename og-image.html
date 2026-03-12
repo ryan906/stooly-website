@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap');
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1200px;
+    height: 800px;
+    overflow: hidden;
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #1e293b;
+  }
+
+  .og {
+    width: 1200px;
+    height: 630px;
+    display: flex;
+    position: relative;
+    background: linear-gradient(135deg, #1e293b 0%, #1a2536 40%, #1e2d3f 100%);
+    overflow: hidden;
+  }
+
+  /* Subtle background texture */
+  .og::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 800px 500px at 85% 50%, rgba(34, 197, 94, 0.06) 0%, transparent 70%),
+      radial-gradient(ellipse 600px 400px at 15% 60%, rgba(59, 154, 225, 0.04) 0%, transparent 70%);
+  }
+
+  /* Left side — text content */
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 64px 0px 64px 72px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 40px;
+  }
+
+  .brand img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+  }
+
+  .brand span {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+  }
+
+  .headline {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 66px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+
+  .subline {
+    font-size: 40px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.5;
+    max-width: 420px;
+  }
+
+  /* Right side — score UI */
+  .right {
+    width: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 2;
+  }
+
+  .phone-frame {
+    width: 320px;
+    height: 520px;
+    background: linear-gradient(170deg, #1a2332 0%, #141c28 100%);
+    border-radius: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+      0 40px 80px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(255, 255, 255, 0.05),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+    position: relative;
+  }
+
+  .score-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #22c55e;
+    margin-bottom: 32px;
+  }
+
+  .score-ring {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 28px;
+  }
+
+  .score-ring svg {
+    width: 200px;
+    height: 200px;
+    transform: rotate(-90deg);
+  }
+
+  .score-ring-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.06);
+    stroke-width: 12;
+  }
+
+  .score-ring-fill {
+    fill: none;
+    stroke: #22c55e;
+    stroke-width: 12;
+    stroke-linecap: round;
+    stroke-dasharray: 565;
+    stroke-dashoffset: 34;
+    filter: drop-shadow(0 0 12px rgba(34, 197, 94, 0.4));
+  }
+
+  .score-number {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 72px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.04em;
+  }
+
+  .score-summary {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  .score-delta {
+    font-size: 13px;
+    font-weight: 600;
+    color: #22c55e;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 24px;
+  }
+
+  .score-dots {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .score-dot-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .score-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+  }
+
+  .score-dot.amber {
+    background: #f59e0b;
+  }
+
+  .score-dot-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="og">
+  <!-- Left: Brand + Copy -->
+  <div class="left">
+    <div class="brand">
+      <img src="logo.png" alt="Stooly">
+      <span>Stooly</span>
+    </div>
+    <div class="headline">
+      Your Gut Is<br>Telling You<br>Something.
+    </div>
+    <div class="subline">
+      Are You Listening?
+    </div>
+  </div>
+
+  <!-- Right: Score UI -->
+  <div class="right">
+    <div class="phone-frame">
+      <div class="score-label">Gut Health Score</div>
+      <div class="score-ring">
+        <svg viewBox="0 0 200 200">
+          <circle class="score-ring-bg" cx="100" cy="100" r="90" />
+          <circle class="score-ring-fill" cx="100" cy="100" r="90" />
+        </svg>
+        <div class="score-number">94</div>
+      </div>
+      <div class="score-summary">Outstanding week — ideal<br>form and perfect frequency</div>
+      <div class="score-delta">&#8593; 5 pts from last week</div>
+      <div class="score-dots">
+        <div class="score-dot-group">
+          <div class="score-dot"></div>
+          <div class="score-dot-label">Form</div>
+        </div>
+        <div class="score-dot-group">
+          <div class="score-dot amber"></div>
+          <div class="score-dot-label">Cons</div>
+        </div>
+        <div class="score-dot-group">
+          <div class="score-dot"></div>
+          <div class="score-dot-label">Freq</div>
+        </div>
+        <div class="score-dot-group">
+          <div class="score-dot"></div>
+          <div class="score-dot-label">Anom</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
