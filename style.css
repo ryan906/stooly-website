@@ -87,12 +87,23 @@ h1, h2, h3, .font-serif {
     transform: rotate(-45deg) translate(2.3px, -2.3px);
 }
 
-.mobile-toggle.active {
-    position: fixed;
+/* ── Mobile Menu Close Button ──────────────────────────────── */
+.mobile-menu-close {
+    position: absolute;
     top: 22px;
     right: 24px;
-    z-index: 1001;
+    z-index: 1002;
+    background: none;
+    border: none;
+    cursor: pointer;
     padding: 8px;
+    color: #1b1c19;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+}
+
+.mobile-menu-close:hover {
+    opacity: 1;
 }
 
 /* ── Mobile Menu ───────────────────────────────────────────── */

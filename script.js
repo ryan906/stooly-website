@@ -19,6 +19,16 @@ mobileToggle.addEventListener('click', () => {
     document.body.classList.toggle('overflow-hidden');
 });
 
+// Close button inside mobile menu
+const mobileClose = document.getElementById('mobileClose');
+if (mobileClose) {
+    mobileClose.addEventListener('click', () => {
+        mobileToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.classList.remove('overflow-hidden');
+    });
+}
+
 mobileMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         mobileToggle.classList.remove('active');
