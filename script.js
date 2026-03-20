@@ -16,18 +16,18 @@ const mobileMenu = document.getElementById('mobileMenu');
 mobileToggle.addEventListener('click', () => {
     mobileToggle.classList.toggle('active');
     mobileMenu.classList.toggle('active');
-    document.body.classList.toggle('menu-open');
+    document.body.classList.toggle('overflow-hidden');
 });
 
 mobileMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         mobileToggle.classList.remove('active');
         mobileMenu.classList.remove('active');
-        document.body.classList.remove('menu-open');
+        document.body.classList.remove('overflow-hidden');
     });
 });
 
-// ── Scroll reveal (fade-up + scale) ─────────────────────────
+// ── Scroll reveal ────────────────────────────────────────────
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -65,3 +65,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// ── FAQ Accordion ───────────────────────────────────────────
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+        const item = button.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+
+        // Close all other items
+        document.querySelectorAll('.faq-item.open').forEach(openItem => {
+            if (openItem !== item) {
+                openItem.classList.remove('open');
+                openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Toggle current
+        item.classList.toggle('open');
+        button.setAttribute('aria-expanded', !isOpen);
+    });
+});

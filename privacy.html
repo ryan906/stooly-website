@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy — Stooly</title>
     <meta name="description" content="Stooly Privacy Policy. Learn how we handle your data with care — photos are never stored, and your data stays yours.">
-    <meta name="theme-color" content="#FFFFFF">
+    <meta name="theme-color" content="#5B8A9A">
     <link rel="canonical" href="https://stooly.app/privacy.html">
-    <!-- Open Graph -->
     <meta property="og:title" content="Privacy Policy — Stooly">
     <meta property="og:description" content="Your data stays yours. Photos are never stored, nothing is shared, and you can delete everything anytime.">
     <meta property="og:type" content="website">
@@ -15,138 +14,61 @@
     <meta property="og:image" content="https://stooly.app/og-card-v4.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Stooly — AI-powered gut health scoring. Track your digestive wellness with a simple daily habit.">
     <meta property="og:site_name" content="Stooly">
-    <meta property="og:locale" content="en_US">
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Privacy Policy — Stooly">
     <meta name="twitter:description" content="Your data stays yours. Photos are never stored, nothing is shared, and you can delete everything anytime.">
     <meta name="twitter:image" content="https://stooly.app/og-card-v4.png">
-    <meta name="twitter:image:alt" content="Stooly — AI-powered gut health scoring. Track your digestive wellness with a simple daily habit.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#5B8A9A",
+                    "primary-dark": "#4A7585",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1b1c19",
+                    "surface": "#fbf9f4",
+                    "surface-container-low": "#f5f3ee",
+                    "surface-container-highest": "#e4e2dd",
+                    "on-surface": "#1b1c19",
+                    "on-surface-variant": "#5a5a5a",
+                    "outline-variant": "#c4c8c1",
+                },
+                fontFamily: {
+                    "headline": ["Noto Serif"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+                },
+            },
+        },
+    }
+    </script>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.png" type="image/png">
-    <style>
-        .legal-page {
-            padding-top: calc(var(--nav-height) + 60px);
-            padding-bottom: 80px;
-            min-height: 100vh;
-        }
-        .legal-header {
-            margin-bottom: 48px;
-        }
-        .legal-header h1 {
-            font-family: var(--serif);
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            margin-bottom: 12px;
-            color: var(--text);
-        }
-        .legal-meta {
-            font-size: 0.88rem;
-            color: var(--text-muted);
-        }
-        .legal-content {
-            max-width: 720px;
-        }
-        .legal-content h2 {
-            font-size: 1.3rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            margin-top: 48px;
-            margin-bottom: 16px;
-            color: var(--text);
-        }
-        .legal-content h3 {
-            font-size: 1.05rem;
-            font-weight: 700;
-            margin-top: 32px;
-            margin-bottom: 12px;
-            color: var(--text);
-        }
-        .legal-content p {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 16px;
-        }
-        .legal-content ul, .legal-content ol {
-            margin-bottom: 16px;
-            padding-left: 24px;
-        }
-        .legal-content li {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 6px;
-        }
-        .legal-content strong {
-            color: var(--text);
-            font-weight: 600;
-        }
-        .legal-content a {
-            color: var(--accent);
-            text-decoration: underline;
-            text-underline-offset: 2px;
-        }
-        .legal-content a:hover {
-            color: var(--accent-hover);
-        }
-        .legal-content table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0 24px;
-            font-size: 0.9rem;
-        }
-        .legal-content th {
-            text-align: left;
-            padding: 12px 16px;
-            background: var(--bg-alt);
-            border: 1px solid var(--border);
-            color: var(--text);
-            font-weight: 600;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-        }
-        .legal-content td {
-            padding: 12px 16px;
-            border: 1px solid var(--border);
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-        .legal-highlight {
-            padding: 20px 24px;
-            background: var(--bg-alt);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-sm);
-            margin: 24px 0;
-        }
-        .legal-highlight p {
-            margin-bottom: 0;
-        }
-    </style>
 </head>
-<body>
+<body class="bg-surface text-on-surface overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="nav nav-scrolled" id="nav">
-        <div class="nav-container">
-            <a href="/" class="nav-logo">
-                <img class="nav-logo-icon" src="logo.png" alt="Stooly">
-                Stooly
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300 nav-scrolled" id="nav">
+        <div class="flex justify-between items-center px-6 md:px-12 py-5 max-w-[1440px] mx-auto w-full">
+            <a href="/" class="flex items-center gap-3">
+                <img src="logo.png" alt="Stooly" class="h-7 w-auto">
+                <span class="font-serif text-xl font-bold text-on-surface tracking-[0.15em] uppercase">Stooly</span>
             </a>
-
-            <div class="nav-center">
-                <a href="/#features">Features</a>
-                <a href="/#how-it-works">How It Works</a>
+            <div class="hidden md:flex space-x-10 items-center">
+                <a href="/#features" class="font-serif tracking-tight text-[17px] text-on-surface/50 hover:text-on-surface transition-colors duration-200">Features</a>
+                <a href="/#compare" class="font-serif tracking-tight text-[17px] text-on-surface/50 hover:text-on-surface transition-colors duration-200">Compare</a>
+                <a href="/#faq" class="font-serif tracking-tight text-[17px] text-on-surface/50 hover:text-on-surface transition-colors duration-200">FAQ</a>
             </div>
-
-            <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">
+            <a href="https://apps.apple.com/us/app/stooly-know-your-gut-health/id6760133808" class="hidden md:inline-flex items-center gap-2 bg-primary text-on-primary px-6 py-2.5 rounded-sm font-label text-sm tracking-[0.15em] uppercase hover:bg-primary-dark transition-colors duration-200" target="_blank" rel="noopener">
+                Download Free
+            </a>
+            <button class="mobile-toggle md:hidden" id="mobileToggle" aria-label="Menu">
                 <span></span>
                 <span></span>
             </button>
@@ -155,18 +77,19 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-links">
-            <a href="/#features">Features</a>
-            <a href="/#how-it-works">How It Works</a>
+        <div class="flex flex-col items-center justify-center gap-8 h-full">
+            <a href="/#features" class="font-serif text-2xl text-on-surface/60 hover:text-on-surface transition-colors">Features</a>
+            <a href="/#compare" class="font-serif text-2xl text-on-surface/60 hover:text-on-surface transition-colors">Compare</a>
+            <a href="/#faq" class="font-serif text-2xl text-on-surface/60 hover:text-on-surface transition-colors">FAQ</a>
         </div>
     </div>
 
     <!-- Privacy Policy -->
-    <section class="legal-page">
-        <div class="container">
-            <div class="legal-header">
-                <h1>Privacy Policy</h1>
-                <p class="legal-meta">Effective Date: February 10, 2026 &middot; Last Updated: February 10, 2026</p>
+    <section class="pt-32 md:pt-40 pb-24 md:pb-32 px-6 md:px-12 min-h-screen">
+        <div class="max-w-[720px] mx-auto">
+            <div class="mb-12">
+                <h1 class="text-4xl md:text-5xl font-serif leading-tight mb-4">Privacy Policy</h1>
+                <p class="text-on-surface-variant text-sm tracking-wide">Effective Date: February 10, 2026 &middot; Last Updated: February 10, 2026</p>
             </div>
 
             <div class="legal-content">
@@ -174,8 +97,8 @@
 
                 <p>We built Stooly with privacy as a core principle. We believe you should understand exactly what happens to your data, and we've designed the App to collect only the minimum information necessary to provide you with a great experience.</p>
 
-                <div class="legal-highlight">
-                    <p><strong>The key thing to know:</strong> Photos you take in Stooly are used solely for real-time analysis and are never stored. Only the resulting health data (classification, scores, and metrics) is saved to your account.</p>
+                <div class="my-8 p-6 md:p-8 bg-surface-container-low border border-outline-variant/30">
+                    <p class="mb-0"><strong>The key thing to know:</strong> Photos you take in Stooly are used solely for real-time analysis and are never stored. Only the resulting health data (classification, scores, and metrics) is saved to your account.</p>
                 </div>
 
                 <h2>1. Information We Collect</h2>
@@ -366,38 +289,27 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <img src="logo.png" alt="Stooly">
-                        Stooly
-                    </div>
-                    <p class="footer-tagline">AI-powered gut health tracking. Know your gut, improve your life.</p>
-                </div>
-                <div class="footer-links-grid">
-                    <div class="footer-col">
-                        <h4>Product</h4>
-                        <a href="/#features">Features</a>
-                        <a href="/#how-it-works">How It Works</a>
-                        <a href="/#notify">Get Notified</a>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Company</h4>
-                        <a href="mailto:support@stooly.app">Contact</a>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Legal</h4>
-                        <a href="/privacy.html">Privacy Policy</a>
-                        <a href="/terms.html">Terms of Service</a>
-                    </div>
-                </div>
+    <footer class="w-full pt-24 pb-12 bg-surface border-t border-on-surface/5">
+        <div class="flex flex-col items-center justify-center px-6 md:px-12 text-center w-full max-w-[1440px] mx-auto">
+            <div class="flex items-center gap-3 mb-4">
+                <img src="logo.png" alt="Stooly" class="h-8 w-auto">
+                <span class="font-serif text-3xl italic text-on-surface">Stooly</span>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Four Pi Systems LLC. All rights reserved.</p>
-                <p class="footer-disclaimer">Stooly is a wellness tool and does not provide medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider for medical concerns.</p>
+            <p class="text-on-surface/40 text-sm font-light mb-10 max-w-md">AI-powered gut health tracking. Free, private, and available anywhere you go.</p>
+            <div class="flex flex-wrap justify-center gap-8 mb-14">
+                <a href="/#features" class="font-label tracking-[0.05em] text-xs uppercase text-on-surface/40 hover:text-primary transition-colors">Features</a>
+                <a href="/#compare" class="font-label tracking-[0.05em] text-xs uppercase text-on-surface/40 hover:text-primary transition-colors">Compare</a>
+                <a href="/#faq" class="font-label tracking-[0.05em] text-xs uppercase text-on-surface/40 hover:text-primary transition-colors">FAQ</a>
+                <a href="/privacy.html" class="font-label tracking-[0.05em] text-xs uppercase text-on-surface/40 hover:text-primary transition-colors">Privacy</a>
+                <a href="/terms.html" class="font-label tracking-[0.05em] text-xs uppercase text-on-surface/40 hover:text-primary transition-colors">Terms</a>
+                <a href="mailto:support@stooly.app" class="font-label tracking-[0.05em] text-xs uppercase text-on-surface/40 hover:text-primary transition-colors">Contact</a>
             </div>
+            <p class="font-label tracking-[0.05em] text-xs uppercase text-on-surface/30 mb-3">
+                &copy; 2026 Four Pi Systems LLC. All rights reserved.
+            </p>
+            <p class="text-on-surface/25 text-[11px] max-w-lg leading-relaxed">
+                Stooly is a wellness tool and does not provide medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider for medical concerns.
+            </p>
         </div>
     </footer>
 
