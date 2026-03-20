@@ -236,6 +236,106 @@
     </section>
 
     <!-- ════════════════════════════════════════════════════════
+         DEEP TRACKING — What We Analyze
+         ════════════════════════════════════════════════════════ -->
+    <section class="py-28 md:py-36 px-6 md:px-24 bg-surface border-y border-outline-variant/20">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-24 mb-20">
+                <div class="md:col-span-5 scroll-reveal">
+                    <span class="font-label text-xs tracking-[0.3em] uppercase text-primary mb-6 block">The Data</span>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif leading-tight mb-8">Every scan captures more than you think.</h2>
+                    <p class="text-on-surface-variant leading-relaxed text-lg font-light">
+                        A single photo feeds our AI engine dozens of clinical signals. Stooly doesn't just classify — it builds a living profile of your digestive health, scan after scan, week after week.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-outline-variant/20">
+                <!-- Stool Form -->
+                <div class="bg-surface p-8 md:p-10 scroll-reveal">
+                    <div class="flex items-center gap-3 mb-5">
+                        <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        <span class="font-label text-xs tracking-[0.2em] uppercase text-primary font-semibold">Stool Form</span>
+                    </div>
+                    <p class="text-on-surface font-serif text-lg mb-2">Bristol Scale Types 1–7</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed font-light">Automatic classification across the full Bristol Stool Scale. No charts to memorize, no manual selection — our AI reads form and structure instantly.</p>
+                </div>
+
+                <!-- Color Analysis -->
+                <div class="bg-surface p-8 md:p-10 scroll-reveal">
+                    <div class="flex items-center gap-3 mb-5">
+                        <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                        <span class="font-label text-xs tracking-[0.2em] uppercase text-primary font-semibold">Color Analysis</span>
+                    </div>
+                    <p class="text-on-surface font-serif text-lg mb-2">Chromatic health signals</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed font-light">Color carries clinical meaning. Stooly evaluates hue, shade, and saturation to surface patterns that may indicate dietary effects, hydration levels, or changes worth discussing with your doctor.</p>
+                </div>
+
+                <!-- Consistency -->
+                <div class="bg-surface p-8 md:p-10 scroll-reveal">
+                    <div class="flex items-center gap-3 mb-5">
+                        <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg>
+                        <span class="font-label text-xs tracking-[0.2em] uppercase text-primary font-semibold">Consistency</span>
+                    </div>
+                    <p class="text-on-surface font-serif text-lg mb-2">Texture &amp; composition</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed font-light">Beyond form type, our model evaluates surface characteristics, cohesion, and structural integrity — the subtle details that distinguish a healthy gut from one under stress.</p>
+                </div>
+
+                <!-- Frequency Patterns -->
+                <div class="bg-surface p-8 md:p-10 scroll-reveal">
+                    <div class="flex items-center gap-3 mb-5">
+                        <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        <span class="font-label text-xs tracking-[0.2em] uppercase text-primary font-semibold">Frequency Patterns</span>
+                    </div>
+                    <p class="text-on-surface font-serif text-lg mb-2">Regularity &amp; rhythm</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed font-light">How often matters. Stooly tracks your daily, weekly, and monthly frequency to establish your personal baseline — then flags deviations that break the pattern.</p>
+                </div>
+
+                <!-- Timing Intelligence -->
+                <div class="bg-surface p-8 md:p-10 scroll-reveal">
+                    <div class="flex items-center gap-3 mb-5">
+                        <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        <span class="font-label text-xs tracking-[0.2em] uppercase text-primary font-semibold">Timing Intelligence</span>
+                    </div>
+                    <p class="text-on-surface font-serif text-lg mb-2">When matters as much as what</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed font-light">Time-of-day patterns, intervals between scans, and circadian consistency. Your gut runs on a clock — Stooly learns its rhythm and shows you when things shift.</p>
+                </div>
+
+                <!-- Anomaly Detection -->
+                <div class="bg-surface p-8 md:p-10 scroll-reveal">
+                    <div class="flex items-center gap-3 mb-5">
+                        <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        <span class="font-label text-xs tracking-[0.2em] uppercase text-primary font-semibold">Anomaly Detection</span>
+                    </div>
+                    <p class="text-on-surface font-serif text-lg mb-2">Early signals, surfaced automatically</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed font-light">Blood, mucus, unusual color, or unexpected changes — Stooly flags anomalies you might miss and gives you the data to have a better conversation with your doctor.</p>
+                </div>
+            </div>
+
+            <!-- Insights row -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/20 mt-px">
+                <div class="bg-surface p-8 md:p-10 scroll-reveal">
+                    <div class="flex items-center gap-3 mb-5">
+                        <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><path d="M11 18H8a2 2 0 0 1-2-2V9"/></svg>
+                        <span class="font-label text-xs tracking-[0.2em] uppercase text-primary font-semibold">Habit Correlations</span>
+                    </div>
+                    <p class="text-on-surface font-serif text-lg mb-2">Connect the dots between gut and lifestyle</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed font-light">Stooly surfaces links between your gut health score and your daily habits — diet changes, sleep quality, exercise, hydration, stress, and travel. See what actually moves the needle.</p>
+                </div>
+
+                <div class="bg-surface p-8 md:p-10 scroll-reveal">
+                    <div class="flex items-center gap-3 mb-5">
+                        <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        <span class="font-label text-xs tracking-[0.2em] uppercase text-primary font-semibold">Personalized Insights</span>
+                    </div>
+                    <p class="text-on-surface font-serif text-lg mb-2">Intelligence that learns you</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed font-light">Not generic advice — insights calibrated to your personal baseline. Stooly learns what's normal for you, so when something changes, you know it matters.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
          SCIENCE — Wide Grid with Floating Quote
          ════════════════════════════════════════════════════════ -->
     <section class="py-28 md:py-36 px-6 md:px-24 bg-surface">
