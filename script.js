@@ -27,6 +27,15 @@ mobileMenu.querySelectorAll('a').forEach(link => {
     });
 });
 
+// Close menu when tapping the background (not a link)
+mobileMenu.addEventListener('click', (e) => {
+    if (e.target === mobileMenu) {
+        mobileToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.classList.remove('overflow-hidden');
+    }
+});
+
 // ── Scroll reveal ────────────────────────────────────────────
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

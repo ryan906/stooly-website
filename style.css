@@ -38,6 +38,18 @@ h1, h2, h3, .font-serif {
     );
 }
 
+@media (max-width: 768px) {
+    .hero-gradient {
+        background: linear-gradient(
+            to bottom,
+            rgba(251, 249, 244, 0.2) 0%,
+            rgba(251, 249, 244, 0.6) 30%,
+            rgba(251, 249, 244, 0.92) 55%,
+            rgba(251, 249, 244, 1) 75%
+        );
+    }
+}
+
 /* ── Navigation ────────────────────────────────────────────── */
 #nav.nav-scrolled {
     background: rgba(251, 249, 244, 0.85);
@@ -73,6 +85,14 @@ h1, h2, h3, .font-serif {
 
 .mobile-toggle.active span:last-child {
     transform: rotate(-45deg) translate(2.3px, -2.3px);
+}
+
+.mobile-toggle.active {
+    position: fixed;
+    top: 22px;
+    right: 24px;
+    z-index: 1001;
+    padding: 8px;
 }
 
 /* ── Mobile Menu ───────────────────────────────────────────── */
