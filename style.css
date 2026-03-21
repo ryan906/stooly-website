@@ -227,7 +227,7 @@ body.loaded .anim-fade-up {
 }
 
 .faq-question:hover {
-    color: #5B8A9A;
+    color: #3D7A8A;
 }
 
 .faq-chevron {
@@ -240,7 +240,7 @@ body.loaded .anim-fade-up {
 
 .faq-item.open .faq-chevron {
     transform: rotate(180deg);
-    color: #5B8A9A;
+    color: #3D7A8A;
 }
 
 .faq-answer {
@@ -317,7 +317,7 @@ body.loaded .anim-fade-up {
 }
 
 .legal-content a {
-    color: #5B8A9A;
+    color: #3D7A8A;
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-color: rgba(91, 138, 154, 0.3);
@@ -325,7 +325,7 @@ body.loaded .anim-fade-up {
 }
 
 .legal-content a:hover {
-    text-decoration-color: #5B8A9A;
+    text-decoration-color: #3D7A8A;
 }
 
 .legal-content table {
